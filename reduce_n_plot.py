@@ -3,6 +3,7 @@ from sklearn.manifold import TSNE
 import matplotlib.pyplot as plt
 import numpy as np
 import plotly.graph_objs as go
+import sklearn
 
 def load_models():
     cnn_model = Word2Vec.load('CNN_word2vec_model')
@@ -76,7 +77,7 @@ def plot_reduced_embeddings(embeddings_2d, similar_words, num_similar_words, wor
     fig.show()
 
 def plot_word_analogy_2d(model, word1, word2, word3, word4):
-        `# Get the word embeddings
+        # Get the word embeddings
         word1_vec = model.wv[word1]
         word2_vec = model.wv[word2]
         word3_vec = model.wv[word3]
@@ -108,3 +109,4 @@ def plot_word_analogy_2d(model, word1, word2, word3, word4):
         plt.ylabel('Dimension 2')
         plt.grid(True)
         plt.show()
+
