@@ -1,15 +1,17 @@
-from load_and_clean_data import load_and_clean_data
-from train_word2vec_model import train_word2vec_model
+from train_embedding import get_data, preprocess_text
+from train_embedding import train_word2vec_model
 from reduce_n_plot import load_models, get_similar_words, reduce_dimensions, plot_reduced_embeddings, plot_word_analogy_2d
 
 def main():
     # Load and clean data
-    cnn_data, msnbc_data, fox_data = load_and_clean_data()
+    df = get_data()
+    df = preprocess_text(df)
 
-    # Train Word2Vec models
-    train_word2vec_model(cnn_data, "CNN_word2vec_model")
-    train_word2vec_model(msnbc_data, "MSNBC_word2vec_model")
-    train_word2vec_model(fox_data, "Fox News_word2vec_model")
+    news_sources = ['CNN', 'MSNBC', 'Fox News']
+    for source in news_sources:
+        source_data = df[df['source_name'] == source]
+        # Train Word2Vec models
+        train_word2vec_model(source_data, f"{source}_word2vec_model")
 
     # Load the models
     cnn_model, msnbc_model, fox_model = load_models()
