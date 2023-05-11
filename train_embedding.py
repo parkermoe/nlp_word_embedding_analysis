@@ -30,10 +30,13 @@ def preprocess_text(df):
     return df
 
 
-def train_word2vec_model(source_articles):
-    model = Word2Vec(source_articles, size=100, window=5, min_count=5, workers=4)
-    model.train(source_articles, total_examples=len(source_articles), epochs=10)
-    return model
+def train_word2vec_model(df, model_name):
+    # Assuming 'preprocessed_content' is the column containing preprocessed text data
+    sentences = df['preprocessed_content'].tolist()
+    # Train Word2Vec model
+    model = Word2Vec(sentences, vector_size=100, window=5, min_count=1, workers=4)
+    # Save the model
+    model.save(model_name)
 
 
 def save_model(model, source):
