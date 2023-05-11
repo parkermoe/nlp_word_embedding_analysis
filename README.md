@@ -4,7 +4,7 @@ This project uses NLP (Natural Language Processing) and Word2Vec embeddings to p
 
 ## Overview
 
-The data used in this project was fetched and cleaned in a previous project. You can find the details about that process [here](link_to_previous_project).
+The data used in this project was fetched and cleaned in a previous project. You can find the details about that process [here](https://github.com/DimensionDweller/news_sentiment_analysis_viz).
 
 The main focus of this project is to train Word2Vec models on text data from various news sources, and use these models to analyze and visualize the semantic relationships between words.
 
