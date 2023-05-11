@@ -1,7 +1,9 @@
 gensim
+scikit-learn
 numpy
 pandas
 nltk
 plotly
 matplotlib
 sklearn
+seaborn
