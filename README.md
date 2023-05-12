@@ -20,7 +20,7 @@ Here's a brief overview of the Python scripts in this project:
 
 1. `train_embedding.py`: This script contains functions to load and preprocess the data, and train Word2Vec models.
 
-2. `reduce_n_plot.py`: This script contains functions to reduce the dimensionality of the word embeddings using t-SNE, and visualize them using matplotlib.
+2. `reduce_n_plot.py`: This script contains functions to reduce the dimensionality of the word embeddings using t-SNE, and visualize them using matplotlib and Plotly.
 
 3. `main.py`: This is the main script that ties everything together. It loads and preprocesses the data, trains the Word2Vec models, loads the models, retrieves and plots similar words and word analogies.
 
