@@ -1,6 +1,6 @@
 # NLP Word Embedding Analysis
 
-This project uses NLP (Natural Language Processing) and Word2Vec embeddings to perform comparative analysis of news articles from different sources.
+This project uses Word2Vec embeddings and t-SNE to perform comparative analysis of news articles from different sources.
 
 ## Overview
 
